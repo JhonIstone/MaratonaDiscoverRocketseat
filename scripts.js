@@ -123,7 +123,7 @@ const DOM = {
 
 const Utils = {
     formatAmount(value) {
-        const signal = Number(value) < 0 ? "-" : ""
+        value = Number(value.replace(/\,\./g, "")) * 100
         return value
     },
 
